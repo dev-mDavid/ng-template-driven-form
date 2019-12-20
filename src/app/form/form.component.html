@@ -1,6 +1,8 @@
 <div class="ui">
   <h2>Demo Form: Sku</h2>
-  <form>
+  <form #f="ngForm"
+        (ngSubmit)="onSubmit(f.value)"
+  >
 
     <div class="field">
       <label for="skuInput">SKU</label>
@@ -11,6 +13,6 @@
               ngModel>
     </div>
     
-    <button>Submit</button>
+    <button type="submit">Submit</button>
   </form>
 </div>
